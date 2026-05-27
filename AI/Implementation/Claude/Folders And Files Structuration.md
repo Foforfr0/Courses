@@ -1,4 +1,4 @@
-# Folder structure
+# Folders and files structuration
 
 Source: [**Instagram** - _Claude folder structure - leadgenman_](https://www.instagram.com/p/DXGw_kcDeaS/?img_index=1)
 
