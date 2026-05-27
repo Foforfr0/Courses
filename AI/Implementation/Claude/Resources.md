@@ -1,30 +1,30 @@
 # Folder structure
 
-Source: [**Instagram**: _Claude folder structure_](https://www.instagram.com/p/DXGw_kcDeaS/?img_index=1)
+Source: [**Instagram** - _Claude folder structure - leadgenman_](https://www.instagram.com/p/DXGw_kcDeaS/?img_index=1)
 
 |-- 📁 Project \
-|-- 📝 [CLAUDE.md](#CLAUDE.md:) \
-|-- 📝 [CLAUDE.local.md](#CLAUDE.local.md) \
-|-- 📝 [.mpc.json](#.mcp.json_--_your_MCP_server_roster) \
+|-- 📝 [CLAUDE.md](#CLAUDEmd) \
+|-- 📝 [CLAUDE.local.md](#CLAUDElocalmd) \
+|-- 📝 [.mpc.json](#mcpjson----your-MCP-server-roster) \
 |-- 📁 .claude \
-|-- |-- 📝 [settings.json](#settings.json_+_.local.json_--config_layers) \
+|-- |-- 📝 [settings.json](#settingsjson--localjson---config-layers) \
 |-- |-- 📝 settings.local.json \
-|-- |-- 📁 [agents](#.claude/agents/_--_subagents) \
+|-- |-- 📁 [agents](#claudeagents----subagents) \
 |-- |-- |-- 📝 code-reviewer.md \
 |-- |-- |-- 📝 debugger.md \
 |-- |-- |-- 📝 test-writter.md \
 |-- |-- |-- 📝 refactorer.md \
 |-- |-- |-- 📝 doc-writer.md \
 |-- |-- |-- 📝 security-auditor.md \
-|-- |-- 📁 [hooks](#.claude/hooks/_--_deterministic_automation) \
+|-- |-- 📁 [hooks](#claudehooks----deterministic-automation) \
 |-- |-- |-- 📝 pre-commit.sh \
 |-- |-- |-- 📝 lint-on-save.sh \
 |-- |-- |-- 📝 session-start.sh \
-|-- |-- 📁 [rules](#.claude/rules/_--_path-scoped_instructions) \
+|-- |-- 📁 [rules](#clauderules----path-scoped-instructions) \
 |-- |-- |-- 📝 api.md \
 |-- |-- |-- 📝 database.md \
 |-- |-- |-- 📝 frontend.md \
-|-- |-- 📁 [skills](#.claude/skills/_--_replaces_commands/) \
+|-- |-- 📁 [skills](#claudeskills----replaces-commands/) \
 |-- |-- |-- 📁 commit-push-pr \
 |-- |-- |-- |-- 📝 SKILL.md \
 |-- |-- |-- 📁 review-pr \
@@ -93,6 +93,41 @@ For example:
   - Current focus
     - CLAUDE.md starter pack carousel.
     - NM-XXX commit format.
+
+### .mcp.json -- your MCP server roster
+
+Secrets never go in .mcp.json --${ENV_VAR} expands from your shell at launch, safe to commit.
+
+Consist on:
+
+- Project-scoped MCP server config.
+- MUST live at project root. NOT in .claude/
+- Live tools: browsers, DBs, APIs, files.
+- Commited = whole team gets the tools.
+
+For example:
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server"],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_TOKEN}"
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "server-github"]
+    }
+  }
+}
+```
 
 ### .claude/agents/ -- subagents
 
@@ -249,41 +284,6 @@ allowed-tools: Bash(git \*) Bash(gh \*) \
    \- git push -u origin HEAD \
    \- gh pr create --base main \
    \- gh pr checks --watch
-
-### .mcp.json -- your MCP server roster
-
-Secrets never go in .mcp.json --${ENV_VAR} expands from your shell at launch, safe to commit.
-
-Consist on:
-
-- Project-scoped MCP server config.
-- MUST live at project root. NOT in .claude/
-- Live tools: browsers, DBs, APIs, files.
-- Commited = whole team gets the tools.
-
-For example:
-
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest"]
-    },
-    "supabase": {
-      "command": "npx",
-      "args": ["-y", "@supabase/mcp-server"],
-      "env": {
-        "SUPABASE_ACCESS_TOKEN": "${SUPABASE_TOKEN}"
-      }
-    },
-    "github": {
-      "command": "npx",
-      "args": ["-y", "server-github"]
-    }
-  }
-}
-```
 
 ### settings.json + .local.json --config layers
 
