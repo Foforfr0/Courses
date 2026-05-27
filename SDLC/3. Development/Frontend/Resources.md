@@ -7,14 +7,10 @@
 - [**Web page**: _CTA.Gallery_](https://www.cta.gallery/)
 - [**Web page**: _Footer.Design_](https://www.footer.design/)4
 
-## Tailwind
-
-- [**Web page**: _ScrollX UI_](https://scrollxui.dev/)
-
-## React
-
-- [**Web page**: _React Bits_](https://reactbits.dev/)
-
 # Functional UI
 
 - [**Web page**: **MapCN**](https://www.mapcn.dev/)
+
+## Build, test, and discover front-end code
+
+- [**Web page**: **CodePen.io**](https://codepen.io/)

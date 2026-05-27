@@ -1,4 +1,4 @@
-# Information Resources
+# Research and dissemination
 
 - [**Github**: _Engineering Blogs_](https://github.com/kilimchoi/engineering-blogs)
 - [**Github**: _Papers We Love_](https://github.com/papers-we-love/papers-we-love)

@@ -12,3 +12,7 @@
 
 - [**Github**: _Google Engineering Practices_](https://github.com/google/eng-practices)
 - [**Github**: _Awesome Scalability_](https://github.com/pnkmtt/awesome-scalability)
+
+## Quality attribute
+
+- [**Web page**: _Web.dev_](https://web.dev/)
