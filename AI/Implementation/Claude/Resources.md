@@ -7,7 +7,7 @@ Source: [**Instagram** - _Claude folder structure - leadgenman_](https://www.ins
 |-- 📝 [CLAUDE.local.md](#CLAUDElocalmd) \
 |-- 📝 [.mpc.json](#mcpjson----your-MCP-server-roster) \
 |-- 📁 .claude \
-|-- |-- 📝 [settings.json](#settingsjson--localjson---config-layers) \
+|-- |-- 📝 [settings.json](#claudesettingsjson--localjson---config-layers) \
 |-- |-- 📝 settings.local.json \
 |-- |-- 📁 [agents](#claudeagents----subagents) \
 |-- |-- |-- 📝 code-reviewer.md \
@@ -24,7 +24,7 @@ Source: [**Instagram** - _Claude folder structure - leadgenman_](https://www.ins
 |-- |-- |-- 📝 api.md \
 |-- |-- |-- 📝 database.md \
 |-- |-- |-- 📝 frontend.md \
-|-- |-- 📁 [skills](#claudeskills----replaces-commands/) \
+|-- |-- 📁 [skills](#claudeskills----replaces-commands) \
 |-- |-- |-- 📁 commit-push-pr \
 |-- |-- |-- |-- 📝 SKILL.md \
 |-- |-- |-- 📁 review-pr \
@@ -125,6 +125,48 @@ For example:
       "command": "npx",
       "args": ["-y", "server-github"]
     }
+  }
+}
+```
+
+### .claude/settings.json + .local.json --config layers
+
+Deny always wins -- rm -rf and .env reads stay blocked.
+
+Consists on:
+
+- settings.json: shared project (commited).
+- settigns.local.json: personal (gitignored).
+- Precedence: managed > local > project > user.
+- Permissions, model, hooks, env live here.
+
+For example:
+
+```json
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "claude-opus-4-6",
+  "includeCoAuthoredBy": true,
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "Bash(bun:* )",
+      "Bash(git status)",
+      "Bash(git commit:* )",
+      "Bash(gh pr:* )"
+    ],
+    "ask": ["Bash(git push:* )"],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force:* )",
+      "Read(./.env)",
+      "Read(./secrets/**)"
+    ]
   }
 }
 ```
@@ -284,45 +326,3 @@ allowed-tools: Bash(git \*) Bash(gh \*) \
    \- git push -u origin HEAD \
    \- gh pr create --base main \
    \- gh pr checks --watch
-
-### settings.json + .local.json --config layers
-
-Deny always wins -- rm -rf and .env reads stay blocked.
-
-Consists on:
-
-- settings.json: shared project (commited).
-- settigns.local.json: personal (gitignored).
-- Precedence: managed > local > project > user.
-- Permissions, model, hooks, env live here.
-
-For example:
-
-```json
-{
-  "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "model": "claude-opus-4-6",
-  "includeCoAuthoredBy": true,
-  "permissions": {
-    "defaultMode": "acceptEdits",
-    "allow": [
-      "Read",
-      "Edit",
-      "Write",
-      "Glob",
-      "Grep",
-      "Bash(bun:* )",
-      "Bash(git status)",
-      "Bash(git commit:* )",
-      "Bash(gh pr:* )"
-    ],
-    "ask": ["Bash(git push:* )"],
-    "deny": [
-      "Bash(rm -rf *)",
-      "Bash(git push --force:* )",
-      "Read(./.env)",
-      "Read(./secrets/**)"
-    ]
-  }
-}
-```
