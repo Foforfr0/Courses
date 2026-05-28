@@ -10,3 +10,14 @@
 | Data freshness | Always fresh (real-time data).                                                 | Not fresh (only at build time).                                      | Fresh (after revalidation interval).                                                    | Always fresh (fetches on client).                                                     |
 | Pros           | ✅Always uo-to-date ✅Great for dynamic data ✅Better for personalized content | ✅ Super fast ✅Great SEO ✅Lower server load ✅Can be hosted on CDN | ✅Fast like SSG ✅Keeps content fresh ✅Scalable ✅Good for high traffic                | ✅Rich interactivity ✅Less server load ✅Better user experience after load           |
 | Cons           | ❌Slower than static❌Higher server cost ❌More complex caching                | ❌Not suitable for real-time data ❌Rebuild required for updates     | ❌More complex than SSG ❌Slightly stale data until revalidate                          | ❌Poor SEO ❌Slower initial load ❌Depends on JS                                      |
+
+Additional Patterns:
+
+- **MPA (Multi-Page Application)**: The classic model: each navigation loads a complete page from the server. Examples: PHP, ASP.NET MVC, and Django applications.
+- **SPA (Single-Page Application)**: The entire application loads on a single page, and navigation is handled with JavaScript. Examples: React, Angular, and Vue.
+- **Hybrid Rendering**: A mix of SSR and CSR: some content is rendered on the server, and some is rendered on the client. Next.js, Nuxt, and SvelteKit use this extensively.
+- **Streaming SSR**: The server sends the HTML in chunks as it is generated, improving TTFB (time to first byte). React 18 introduced this.
+- **Edge Rendering / Edge SSR**: Rendering on distributed servers (CDN/edge), closer to the user. Examples: Vercel Edge Functions and Cloudflare Workers.
+- **Partial Hydration / Islands Architecture**: HTML is rendered statically, and only interactive "islands" are hydrated using JavaScript. Example: Astro, Qwik.
+- **Prerendering**: Generation of static HTML at build time for specific routes, similar to SSG but more limited.
+- **JAMstack**: A philosophy that combines SSG + APIs + CDN for fast and scalable websites.

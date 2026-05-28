@@ -1,4 +1,4 @@
-# Information Resources
+- [**Github**: _Lenis_](https://github.com/darkroomengineering/lenis)
 
 # Pretty UI
 
@@ -9,7 +9,8 @@
 
 # Functional UI
 
-- [**Web page**: **MapCN**](https://www.mapcn.dev/)
+- [**Web page**: MapCN](https://www.mapcn.dev/)
+- [**Web page**: Socket.io](https://socket.io/)
 
 ## Build, test, and discover front-end code
 

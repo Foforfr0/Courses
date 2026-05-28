@@ -9,6 +9,8 @@
 - [**Web page**: _Deepseek_](https://deep-seek.com/)
 - [**Web page**: _Gemini_](https://gemini.google.com/)
 - [**Web page**: _Replit_](https://replit.com/)
+- [**Github**: _Spec kit_](https://github.com/github/spec-kit)
+- [**Web page**: _Manus_](https://manus.im/)
 
 ## Multimedia
 

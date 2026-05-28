@@ -9,6 +9,7 @@
 - [**Github**: _Coding interview university_](https://github.com/jwasham/coding-interview-university)
 - [**Github**: _App ideas_](https://github.com/florinpop17/app-ideas)
 - [**Github**: _Awesome_](https://github.com/sindresorhus/awesome)
+- [**Web page**: _Vercel templates_](https://vercel.com/templates)
 
 ## By language
 
@@ -17,3 +18,7 @@
 - [**YouTube**: _**C++** - Simulating Gracity in C++ - kavan_](https://www.youtube.com/watch?v=_YbGWoUaZg0)
 - [**YouTube**: _**Python** - Building a neural network form SCRATCH (no Tensorflow/Pytorch, just numpy & math) - Samson Zhang_](https://www.youtube.com/watch?v=w8yWXqWQYmU)
 - [**YouTube** _**Rust** - Code Your Own Terminal UI App - Jonkero_](https://www.youtube.com/watch?v=ZTbxXpyqpQ0)
+
+## By topics
+
+- [**YouTube**: _The Ultimate Guide for Physics in Game Development! - Will Hess_](https://www.youtube.com/watch?v=3lBYVSplAuo)
