@@ -12,7 +12,7 @@
 - [**Github**: _Spec kit_](https://github.com/github/spec-kit)
 - [**Web page**: _Manus_](https://manus.im/)
 
-## Multimedia
+## Multimedia Creation
 
 - [**Web page**: _Kling.ai_](https://kling.ai/)
 - [**Web page**: _Open Art_](https://openart.ai/suite)

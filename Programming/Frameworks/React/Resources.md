@@ -14,3 +14,4 @@
 - [**Web page**: _Tanstack_](https://tanstack.com/)
 - [**Web page**: _React hot toast_](https://react-hot-toast.com/)
 - [**Web page**: _React Bits_](https://reactbits.dev/)
+- [**Web page**: _React PDF_](https://react-pdf.org/)
