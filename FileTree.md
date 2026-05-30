@@ -1,10 +1,12 @@
 # File Tree: Courses
 
-**Generated:** 5/29/2026, 4:11:19 PM
+**Generated:** 5/30/2026, 10:04:09 AM
 
 ```
 ├── 📁 AI
 │   ├── 📁 Development
+│   │   ├── 📁 Data Scientist
+│   │   ├── 📁 LLM
 │   │   ├── 📝 Information.md
 │   │   └── 📝 Resources.md
 │   ├── 📁 Implementation
@@ -86,6 +88,7 @@
 │       └── 📝 Resources.md
 ├── 📁 Software Engineering
 │   └── 📝 Resources.md
+├── 📝 FileTree.md
 └── 📝 README.md
 ```
 
