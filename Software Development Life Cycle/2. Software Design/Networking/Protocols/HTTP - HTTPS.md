@@ -1,4 +1,4 @@
-# HTTP
+# HTTP - Hypertext Transfer Protocol
 
 Source: []()
 
@@ -22,7 +22,7 @@ Tags: **[]**
 
 # Inner Function
 
-# HTTPS
+# HTTPS - Hypertext Transfer Protocol Secure
 
 Source: []()
 

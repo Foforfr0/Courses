@@ -1,6 +1,6 @@
-# Database Sharding
+# CQRS - Command Query Responsibility Segregation
 
-Source: []()
+Source: [**Learn Microsoft**](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
 
 Tags: **[]**
 

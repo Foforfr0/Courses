@@ -1,4 +1,4 @@
-# Database Sharding
+# SMTP - Simple Mail Transfer Protocol
 
 Source: []()
 
